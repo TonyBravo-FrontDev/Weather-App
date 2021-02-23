@@ -1,3 +1,9 @@
+# Weather App
+It is a simple weather application, the user can get the current weather of their location and the daily forecast for 7 days, also the user can see details about the weather, such as pressure, humidity, visibility, new, over time I will add more details and information in it.
+
+![imagen](https://github.com/TonyBravo-FrontDev/Weather-App/blob/main/src/img/weatherApp.png)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
