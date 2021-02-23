@@ -1,0 +1,305 @@
+@import "../varaibles";
+@import "./buttonMenu.scss";
+
+#header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 3;
+
+  .container-nav {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    #logo {
+      a {
+        color: $color-white;
+        text-decoration: none;
+        @media (max-width: 599px) {
+          font-size: 1.5rem;
+        }
+        @media (min-width: 600px) {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    .nav-app-menu {
+      z-index: 300;
+      display: flex;
+      position: absolute;
+      flex-direction: column;
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 100%;
+      transition: all 0.2s;
+      pointer-events: none;
+      background-color: #242424;
+
+      .navbar-dark {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+
+        div {
+          width: 90%;
+          margin: auto;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          p {
+            color: $color-gray;
+            margin-right: 2rem;
+            font-weight: 600;
+            @media (max-width: 599px) {
+              font-size: 1.2rem;
+            }
+            @media (min-width: 600px) {
+              font-size: 1.5rem;
+            }
+          }
+
+          h2 {
+            display: flex;
+            align-items: center;
+            color: #999999;
+            font-weight: 400;
+            letter-spacing: 0.4px;
+
+            .icon-map {
+              margin-right: 0.5rem;
+              font-size: 1.5rem;
+            }
+            @media (max-width: 599px) {
+              font-size: 1.8rem;
+            }
+            @media (min-width: 600px) {
+              font-size: 2rem;
+            }
+
+            span {
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+
+      .details {
+        width: 100%;
+        padding: 2rem;
+
+        h2 {
+          color: $color-white;
+          @media (max-width: 599px) {
+            font-size: 2rem;
+          }
+          @media (min-width: 600px) {
+            font-size: 2rem;
+          }
+        }
+
+        div {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 1.5rem;
+
+          .description-color-disabled {
+            font-weight: 500;
+            color: $color-gray;
+            @media (max-width: 599px) {
+              font-size: 1.4rem;
+            }
+            @media (min-width: 600px) {
+              font-size: 1.4rem;
+            }
+          }
+
+          .results-app {
+            color: $color-white;
+            font-weight: 700;
+            @media (max-width: 599px) {
+              font-size: 1.4rem;
+            }
+
+            @media (min-width: 600px) {
+              font-size: 1.4rem;
+            }
+          }
+          .result-min {
+            color: #b6b6b6;
+            font-weight: 500;
+            margin-top: 0.5rem;
+            @media (max-width: 599px) {
+              font-size: 1.3rem;
+            }
+
+            @media (min-width: 600px) {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+
+      .next-days {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: repeat(6, 1fr);
+        background-image: linear-gradient(
+          to right top,
+          #566d5d,
+          #4a6561,
+          #495b5f,
+          #4b5156,
+          #48484a
+        );
+
+        .days-column {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          .content-next {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .days {
+              color: $color-white;
+              font-weight: 500;
+              text-align: center;
+            }
+
+            .results-app {
+              text-align: center;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+
+      .container-air-wind {
+        width: 100%;
+        height: 11rem;
+        padding: 2rem;
+        display: grid;
+        column-gap: 2rem;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: 50% 40%;
+
+        .columns-air-wind {
+          width: 100%;
+          height: 100%;
+          display: grid;
+          column-gap: 0.5rem;
+          align-items: center;
+          justify-content: center;
+          grid-template-columns: 30% 60%;
+          background-image: linear-gradient(
+            to right top,
+            #566d5d,
+            #4a6561,
+            #495b5f,
+            #4b5156,
+            #48484a
+          );
+
+          .column-air-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .icons-airs {
+              font-size: 4rem;
+            }
+          }
+
+          .column-air {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+
+            h5 {
+              color: $color-white;
+              font-weight: 700;
+              @media (max-width: 599px) {
+                font-size: 2rem;
+              }
+              @media (min-width: 600px) {
+                font-size: 2rem;
+              }
+            }
+
+            p {
+              color: #99999b;
+              font-weight: 600;
+              @media (max-width: 599px) {
+                font-size: 1.1rem;
+              }
+              @media (min-width: 600px) {
+                font-size: 1.2rem;
+              }
+            }
+          }
+        }
+
+        .air {
+          border-radius: 42px 32px 32px 0px;
+        }
+
+        .wind {
+          column-gap: 2rem;
+          border-radius: 32px 0px 42px 32px;
+          grid-template-columns: 20% 20%;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        border-radius: 32px 0px 0px 42px;
+      }
+    }
+
+    .nav-app-menu.open {
+      z-index: 300;
+      left: 0%;
+      transition: all 0.2s;
+      pointer-events: all;
+      @media (min-width: 900px) {
+        width: 70%;
+        left: 30%;
+      }
+
+      @media (min-width: 1200px) {
+        width: 30%;
+        left: 70%;
+      }
+      @media (min-width: 1800px) {
+        width: 30%;
+        left: 70%;
+      }
+    }
+  }
+}
